@@ -30,6 +30,7 @@ This skill is not tied to any harness. Use it to lift the *content* and the
 | `references/05-utility-prompts.md` | Session-title, compaction, post-compaction continuation, output styles |
 | `references/06-context-and-request-envelope.md` | Wire-request envelope, cache control, `<system-reminder>`/`<pasted_content>`, memory format |
 | `references/07-extensions-commands-agents-hooks.md` | Plugin layout, slash-command + subagent frontmatter, hook contract, MCP — with real prompts |
+| `references/08-capability-mapping.md` | How to resolve each harness-specific tool/skill/MCP — reuse directly or a maintained replacement |
 | `references/ground-truth-capture.json` | Raw captured `system` array + built-in tool schemas |
 | `scripts/capture_proxy.py` | Logging proxy to re-capture from any future version |
 
@@ -82,6 +83,10 @@ volatile context (cwd, date, git status, memory) last or in the first user turn.
 - The **text** of every section is model-agnostic prose — reuse verbatim.
 - Replace harness-specific token names (`TodoWrite`, `WebFetch`, `Agent`, `Skill`)
   with your harness's tool names — the originals are marked with `${…}` in the corpus.
+- **Resolve every harness-specific tool, skill and MCP name via `08`**: reuse the
+  original directly where the harness loads the format (`SKILL.md`, `agents/*.md`,
+  `hooks/hooks.json`, `.mcp.json`), otherwise substitute a maintained equivalent
+  (with adoption/activity checked). Never silently drop a capability.
 - The lean `# Harness` block (02 §3a) is the most portable opener; it assumes only
   "a terminal, a permission mode, and file/search tools".
 - Tool schemas in `03-builtin-tools.md` are plain JSON-Schema descriptions — reuse

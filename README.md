@@ -48,6 +48,7 @@ the description in the frontmatter.
 | `references/05-utility-prompts.md` | Session-title, compaction, post-compaction continuation, output styles |
 | `references/06-context-and-request-envelope.md` | Wire-request envelope, cache control, `<system-reminder>`/`<pasted_content>`, memory format |
 | `references/07-extensions-commands-agents-hooks.md` | Plugin layout, slash-command & subagent frontmatter, hook contract, MCP — with real prompts |
+| `references/08-capability-mapping.md` | Resolve each harness-specific tool/skill/MCP: reuse directly or a maintained replacement |
 | `references/ground-truth-capture.json` | Raw captured `system` array + built-in tool schemas |
 | `scripts/capture_proxy.py` | Logging proxy to re-capture the prompts from any build |
 
@@ -107,6 +108,9 @@ context (cwd, date, git status, memory) last or in the first user turn.
   "a terminal, a permission mode, and file/search tools".
 - The tool schemas in 03 are plain JSON-Schema descriptions — reuse the descriptions
   with any function-calling API.
+- **Resolve harness-specific names via 08.** Reuse the original skill/MCP directly
+  when your harness loads the format; otherwise substitute a maintained equivalent
+  (activity and adoption are checked there). Nothing is dropped silently.
 
 ## Re-extracting for a new build
 
