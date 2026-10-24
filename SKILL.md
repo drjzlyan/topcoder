@@ -2,10 +2,11 @@
 name: topcoder
 description: >-
   A corpus of production coding-agent prompts: system prompts, tool definitions,
-  subagent prompts, compaction/title prompts, and the context-injection scheme.
-  Use when designing or studying coding-agent prompts across harnesses (opencode,
-  Cursor, Codex, aider, custom agents) — to adopt a proven prompt section, build
-  an agent system prompt, or re-extract the prompts from a new release.
+  subagent prompts, slash-command and hook prompts, the extension/plugin layer,
+  and the context-injection scheme. Use when designing or studying coding-agent
+  prompts across harnesses (opencode, Cursor, Codex, aider, custom agents) — to
+  adopt a proven prompt section, build an agent system prompt, or re-extract the
+  prompts from a new release.
 ---
 
 # Topcoder Prompt Corpus (harness-agnostic)
@@ -28,6 +29,7 @@ This skill is not tied to any harness. Use it to lift the *content* and the
 | `references/04-subagents.md` | Explore, general-purpose, web-reading, statusline subagent prompts |
 | `references/05-utility-prompts.md` | Session-title, compaction, post-compaction continuation, output styles |
 | `references/06-context-and-request-envelope.md` | Wire-request envelope, cache control, `<system-reminder>`/`<pasted_content>`, memory format |
+| `references/07-extensions-commands-agents-hooks.md` | Plugin layout, slash-command + subagent frontmatter, hook contract, MCP — with real prompts |
 | `references/ground-truth-capture.json` | Raw captured `system` array + built-in tool schemas |
 | `scripts/capture_proxy.py` | Logging proxy to re-capture from any future version |
 
@@ -67,6 +69,8 @@ prompt — they are written to be independent:
 - **Scope discipline** → `# Delivering work` and `# Corrections` (02).
 - **Conciseness** → `# Tone and style` (02) + the communication rules (05).
 - **Subagent design** → the read-only constraint block in the Explore prompt (04).
+- **Extension layer** → `07` for slash-command/subagent frontmatter, the hook
+  input/output contract, MCP config, and full real prompts (feature-dev, code-review).
 
 ### 2. Build a new agent system prompt
 Follow the assembler in 02: identity line → static prefix → optional dynamic

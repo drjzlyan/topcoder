@@ -47,6 +47,7 @@ the description in the frontmatter.
 | `references/04-subagents.md` | Explore, general-purpose, web-reading, statusline subagent prompts |
 | `references/05-utility-prompts.md` | Session-title, compaction, post-compaction continuation, output styles |
 | `references/06-context-and-request-envelope.md` | Wire-request envelope, cache control, `<system-reminder>`/`<pasted_content>`, memory format |
+| `references/07-extensions-commands-agents-hooks.md` | Plugin layout, slash-command & subagent frontmatter, hook contract, MCP — with real prompts |
 | `references/ground-truth-capture.json` | Raw captured `system` array + built-in tool schemas |
 | `scripts/capture_proxy.py` | Logging proxy to re-capture the prompts from any build |
 
@@ -88,6 +89,9 @@ Sections are written to stand alone. The highest-value ones:
 - `# Delivering work` and `# Corrections` (02) — scope discipline.
 - `# Tone and style` (02) + communication rules (05) — conciseness.
 - The Explore subagent prompt (04) — how to constrain a read-only subagent.
+- The extension layer (07) — slash commands, subagents, hooks, and MCP, with the
+  full `feature-dev` and `code-review` workflow prompts and a confidence-scored
+  reviewer.
 
 ### Build a system prompt
 Follow the assembly order in 02: identity line → static prefix → optional dynamic
@@ -147,6 +151,9 @@ and change per release.
 - Captured binary version: `2.1.285` (build `2026-09-29`, git `afb2129`).
 - Live captures include the extracting user's MCP tools (183) — filtered out; only
   the built-in set is documented.
+- `references/07` reproduces prompt and schema text from the bundled plugin
+  marketplace and `examples/`, rebranded to the harness; treat it as reference
+  material.
 - Dynamic sections marked with `${…}` or lists are runtime-interpolated; fill them
   from your own harness.
 - This is reverse-engineering for interoperability and study. Review the applicable
