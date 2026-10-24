@@ -132,6 +132,16 @@ grep -n "Executing actions with care\|# Tone and style\|You are a file search sp
 
 See `references/06` §5 for the full method and the stable builder function names.
 
+## Model references
+
+The `# Environment` section (01, 06) and the subagent table (04) cite models by
+capability tier rather than by a single vendor. Each tier lists benchmark-comparable
+peers across vendors — frontier (Opus 5.5 / Fable 5.1, GPT-5.6, Gemini 3.1 Pro,
+Grok 4.6, DeepSeek V4 Pro, Kimi K2), balanced (Sonnet 5.5, GPT-5.6 mini, Gemini 3.1
+Flash) and fast (Haiku 4.5, GPT-5 nano, Gemini 3.1 Flash-Lite). Use the tier mapping
+to pick an equivalent model for the harness you target; names and IDs are illustrative
+and change per release.
+
 ## Caveats
 
 - Captured binary version: `2.1.285` (build `2026-09-29`, git `afb2129`).

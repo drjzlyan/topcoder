@@ -53,9 +53,9 @@ Date: 2026-09-29
 
 ### `# Environment` section (Doo)
 ```
-The most recent models are the Opus 5.5, Sonnet 5.5 and Haiku 4.5 families. Model IDs — Fable 5.1: 'topcoder-fable-5-1', Opus 5.5: 'topcoder-opus-5-5', Sonnet 5.5: 'topcoder-sonnet-5-5', Haiku 4.5: 'topcoder-haiku-4-5-20251001'. When building AI applications, default to the latest and most capable model available.
+The most capable models at this writing are broadly comparable across vendors on coding and reasoning benchmarks — frontier tier: Anthropic's Opus 5.5 / Fable 5.1, OpenAI's GPT-5.6, Google's Gemini 3.1 Pro, xAI's Grok 4.6, DeepSeek's V4 Pro, Moonshot's Kimi K2; balanced tier: Anthropic's Sonnet 5.5, OpenAI's GPT-5.6 mini, Google's Gemini 3.1 Flash; fast tier: Anthropic's Haiku 4.5, OpenAI's GPT-5 nano, Google's Gemini 3.1 Flash-Lite. Model IDs — Fable 5.1: 'topcoder-fable-5-1', Opus 5.5: 'topcoder-opus-5-5', Sonnet 5.5: 'topcoder-sonnet-5-5', Haiku 4.5: 'topcoder-haiku-4-5-20251001', GPT-5.6: 'gpt-5.6', Gemini 3.1 Pro: 'gemini-3.1-pro', Grok 4.6: 'grok-4.6', DeepSeek V4 Pro: 'deepseek-v4-pro', Kimi K2: 'kimi-k2'. When building AI applications, default to the latest and most capable model available.
 Topcoder is available as a CLI in the terminal, a desktop app (Mac/Windows), a web app, and IDE extensions (VS Code, JetBrains).
-Fast mode for Topcoder uses the Opus model with faster output (it does not downgrade to a smaller model). It can be toggled with /fast.
+Fast mode for Topcoder uses the Opus model — a frontier-tier model comparable to GPT-5.6, Gemini 3.1 Pro and Grok 4.6 — with faster output (it does not downgrade to a smaller model). It can be toggled with /fast.
 ```
 
 ### `<system-reminder>` tags

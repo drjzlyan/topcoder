@@ -10,11 +10,13 @@ Registry entries found in the binary:
 | `general-purpose` | research complex questions, search code, multi-step tasks | `*` | inherit |
 | `Explore` (file search specialist) | read-only codebase exploration | read-only set | fast/inherit |
 | `web-fetch` (web-reading specialist) | fetch + read URLs when no WebFetch tool of its own | WebFetch | inherit |
-| `statusline-setup` | configure the user's status line | Read, Edit | sonnet |
+| `statusline-setup` | configure the user's status line | Read, Edit | sonnet (balanced tier) |
 | `fork` | inherits full conversation context, runs in background | (parent's) | inherit |
 | `guided-plan` / `custom` | user/project-defined agents from `.md` frontmatter | declared | declared |
 
 `${...}` below marks a runtime interpolation.
+
+The `model` column names a tier. Comparable models in each tier: `fast` / `haiku` ≈ GPT-5 nano, Gemini 3.1 Flash-Lite; `inherit` / `sonnet` ≈ GPT-5.6 mini, Gemini 3.1 Flash; `opus` / `fable` ≈ GPT-5.6, Gemini 3.1 Pro, Grok 4.6, DeepSeek V4 Pro, Kimi K2.
 
 ---
 
